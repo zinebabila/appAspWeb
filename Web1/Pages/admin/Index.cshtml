@@ -1,0 +1,28 @@
+﻿@page
+@model Web1.Pages.admin.IndexModel
+
+@{
+    ViewData["Title"] = "Authentification";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Authentification">Authentifier</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                <input class="form-control"  placeholder="Nom " name="username" />
+                <input  type="password"  placeholder="Mot de passe" name="password" class="form-control" />
+                
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+ </div>
