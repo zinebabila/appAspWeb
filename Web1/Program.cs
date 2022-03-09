@@ -21,7 +21,7 @@ namespace Web1
         {
 
 
-            Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.Debug().WriteTo.File("log.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+        Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.Debug().WriteTo.File("log.txt", rollingInterval: RollingInterval.Day).CreateLogger();
 
             //CreateHostBuilder(args).Build().Run() ;
             var host = CreateHostBuilder(args).Build();
