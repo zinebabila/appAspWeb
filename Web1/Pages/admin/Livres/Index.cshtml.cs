@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Web1.Data;
 using Web1.Models;
-using Microsoft.AspNetCore.Authentication;
 
 namespace Web1.Pages.admin.Livres
 {
@@ -27,12 +26,6 @@ namespace Web1.Pages.admin.Livres
         public async Task OnGetAsync()
         {
             Livre = await _context.Livres.ToListAsync();
-        }
-
-        public async Task<IActionResult> OnPostAsync( )
-        {
-            await HttpContext.SignOutAsync();
-            return RedirectToPage("./Index");
         }
     }
 }

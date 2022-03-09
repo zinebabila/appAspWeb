@@ -9,11 +9,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Web1.Data;
 using Web1.Models;
 
+
 namespace Web1.Pages.admin.Livres
 {
     [Authorize]
     public class CreateModel : PageModel
+        
     {
+        
         private readonly Web1.Data.DataContext _context;
 
         public CreateModel(Web1.Data.DataContext context)

@@ -9,17 +9,17 @@ namespace Web1.Models
     {
         public int LivreID { get; set; }
         public string nom { get; set; }
+        public string image { get; set; }
         public Livre()
         {
 
         }
-        public Livre(string nom)
+        public Livre(string n, int id, string img)
         {
-            this.nom = nom;
-        }
-        public Livre(int id)
-        {
-            this.LivreID = id;
+            LivreID = id;
+            nom = n;
+            image = img;
+
         }
     }
 }
